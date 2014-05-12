@@ -1,0 +1,25 @@
+OUTLN
+OUTLN
+push 7
+pop_ax
+call :1
+OUTLN
+OUT
+OUTLN
+End
+: 1
+push 0
+push_ax
+je :2
+push 1
+push_ax
+je :2
+push 1
+push_ax
+sub
+call :1
+add
+ret
+: 2
+push 1
+ret

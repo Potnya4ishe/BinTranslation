@@ -1,0 +1,27 @@
+IN
+pop_ax
+push 1
+push 1
+push 1
+pop_dx
+pop_cx
+pop_bx
+: 1
+push_ax
+push_dx
+je :2
+push_dx
+push 1
+add
+pop_dx
+push_bx
+push_cx
+push_bx
+add
+pop_bx
+pop_cx
+jmp :1
+: 2
+push_bx
+OUT
+End

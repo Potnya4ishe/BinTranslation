@@ -1,0 +1,30 @@
+OUTLN
+OUTLN
+push 7
+OUTLN
+OUTLN
+pop_ax
+push 1
+pop_bx
+: 3
+call :1
+jmp :3
+: 66
+End
+: 1
+push_ax
+push 1
+je :2
+push_bx
+push_ax
+mul
+pop_bx
+push 1
+push_ax
+sub
+pop_ax
+ret
+: 2
+push_bx
+OUT
+jmp :66
